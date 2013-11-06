@@ -27,6 +27,13 @@
                   <script type="text/javascript" src="phonegap.js"></script>
                         app.initialize();
                 </script>
+                <script type="text/javascript" charset="utf-8">
+                document.addEventListener("deviceready", onDeviceReady, false);
+                
+                    function onDeviceReady() {
+                        navigator.splashscreen.show();
+                    }
+                </script>
     </head>
     <body>
         <div class="app">
