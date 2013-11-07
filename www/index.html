@@ -30,20 +30,20 @@
             document.addEventListener("deviceready", onDeviceReady, false);
             
             function onDeviceReady() {
-                alert('device is ready');
-                //navigator.geolocation.getCurrentPosition(onSuccess, onError);
+                //alert('device is ready');
+                navigator.geolocation.getCurrentPosition(onSuccess, onError);
             }
             
-            //function onSuccess(position) {
-            //    var element = document.getElementById('geolocation');
-              //  element.innerHTML = 'Lat: ' + position.coords.latitude  + '<br />'
-                //                  + 'Long" ' + position.coords.longitude;
-            //}
+            function onSuccess(position) {
+                var element = document.getElementById('geolocation');
+                element.innerHTML = 'Lat: ' + position.coords.latitude  + '<br />'
+                                  + 'Long" ' + position.coords.longitude;
+            }
             
-            //function onError(error) {
-              //  alert('code: '  + error.code    + '\n'  +
-                //      'message: ' + error.message + '\n');
-            //}
+            function onError(error) {
+                alert('code: '  + error.code    + '\n'  +
+                      'message: ' + error.message + '\n');
+            }
         </script>
         
     </head>
