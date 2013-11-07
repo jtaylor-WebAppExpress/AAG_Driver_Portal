@@ -2,8 +2,14 @@
 <head>
         <script type="text/javascript" charset="utf-8">
 
-          alert(document.location);
-          alert('second');
+          var urlString = document.location;
+          var pageVars =  urlString.substr(urlString.indexOf("?")+1,urlString.length);
+          var Var_arr = urlString.split("&");
+          var parameter1 = Var_arr[0];
+          var parameter2 = Var_arr[1];
+          
+          alert(parameter1);
+          alert(parameter2);
         </script>
 </head>
 <body>
