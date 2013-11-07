@@ -35,12 +35,12 @@
             }
             
             function onSuccess(position) {
-                localStorage.setitem("currLat", position.coords.latitude);
-                localStorage.setitem("currLong",position.coords.longitude);
+                var currLat = position.coords.latitude;
+                var currLong = position.coords.longitude;
                 
                 var element = document.getElementById('geolocation');
-                element.innerHTML = 'Lat: ' + localStorage.getitem("currLat")  + '<br />'
-                                  + 'Long" ' + localStorage.getitem("currLong");
+                element.innerHTML = 'Lat: ' + currLat  + '<br />'
+                                  + 'Long" ' + currLong;
             }
             
             function onError(error) {
@@ -55,8 +55,8 @@
             <h1 style="text-align: center;">WELCOME DRIVERS!</h1>
             <p id="geolocation">Finding geolocation...</p>
             <div id="buttons">                                                                
-                <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'http://192.168.1.148/svctrak/index.a5w'">Enter Driver Portal</button></h1>
-                <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'next_page.html'">Go to there</button></h1>
+                <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'http://192.168.1.148/svctrak/index.a5w">Enter Driver Portal</button></h1>
+                <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'next_page.html?currLat='+currLat+'&currLong='currLong'">Go to there</button></h1>
             </div>
         </div>
     </body>
