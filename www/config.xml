@@ -54,7 +54,6 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
-    <gap:plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -73,10 +72,11 @@
     <icon src="img/AAG_icon.png"            gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="res\splashscreen\ldpi_port_200x320.png"    	gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="ires\splashscreen\mdpi_port_320x480.png"			gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="res\splashscreen\hdpi_port_480x800.png"    	gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="res\splashscreen\xhdpi_port_720x1280.png"    gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="splash.png" />
+    <gap:splash src="splash\android\ldpi_port_200x320.png"    	gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="splash\android\mdpi_port_320x480.png"	gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="splash\android\hdpi_port_480x800.png"    	gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="splash\android\xhdpi_port_720x1280.png"    gap:platform="android" gap:density="xhdpi" />
     <gap:splash src="img/WAE_splash.png"    gap:platform="blackberry" />
     <gap:splash src="img/WAE_splash.png"    gap:platform="ios"     width="320" height="480" />
     <gap:splash src="img/WAE_splash.png"    gap:platform="ios"     width="640" height="960" />
