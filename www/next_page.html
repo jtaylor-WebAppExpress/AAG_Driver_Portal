@@ -4,13 +4,18 @@
 
           var urlString = document.location;
           alert(urlString);
-          //var pageVars =  urlString.substr(urlString.indexOf("?")+1,urlString.length);
-          //var Var_arr = urlString.split("&");
-         // var parameter1 = Var_arr[0];
-          //var parameter2 = Var_arr[1];
           
-          //alert(parameter1);
-          //alert(parameter2);
+          var pageVars =  urlString.substr(urlString.indexOf("?")+1,urlString.length);
+          alert(pageVars);
+        
+          var param_arr = pageVars.split("&");
+          var para1 = param_arr[0];
+          var para2 = param_arr[1];
+          
+          var para1_arr = para1.split("=")
+          var para2_arr = para2.split("=")
+          
+          alert("Your "+para1_arr[0]+" is: "+para1_arr[1]+" and your "+para2_arr[0]+" is "+para2_arr[1]);
         </script>
 </head>
 <body>
