@@ -5,13 +5,8 @@
           var urlString = document.location;
           alert(urlString);
           
-          var bothVariables = urlString.split("?");
-          
-          var var1 = bothVariables[0];
-          alert(var1);
-          
-          var var2 = bothVariables[1];
-          alert(var2);
+          var pageVars =  urlString.substr(urlString.indexOf("?")+1,urlString.length);
+          alert(pageVars);
           
           
           
