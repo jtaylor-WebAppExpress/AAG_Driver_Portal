@@ -48,7 +48,10 @@
                       'message: ' + error.message + '\n');
             }
             
-            var JS_Var_URL = "http://192.168.1.148/svctrak/index.a5w?name=Justin&job=developer"
+            function sayHello() {
+                alert('hi');
+            }
+
         </script>
         
     </head>
@@ -58,7 +61,7 @@
             <p id="geolocation">Finding geolocation...</p>
             <div id="buttons">                                                                
                 <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'http://192.168.1.148/svctrak/index.a5w?name=Justin&job=developer'">Enter Driver Portal</button></h1>
-                <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = '" + JS_Var_URL +"'">JS_Var_URL</button></h1>
+                <button style="text-align: center;" class="bluBtn" onclick = "sayHello()">Say Hi</button></h1>
             </div>
         </div>
     </body>
