@@ -5,6 +5,9 @@
           var urlString = document.location;
           alert(urlString);
           
+          var qindex = urlString.indexOf("?")+1;
+          alert(qindex);
+          
           var pageVars =  urlString.substr(urlString.indexOf("?")+1,urlString.length);
           alert(pageVars);
           
