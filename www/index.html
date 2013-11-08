@@ -41,6 +41,17 @@
                 var element = document.getElementById('geolocation');
                 element.innerHTML = 'Lat: ' + currLat  + '<br />'
                                   + 'Long" ' + currLong;
+                                  
+                //Build URL for redirect to include current latitude/longitude
+                var urlString = 'http://192.168.1.148/svctrak/index.a5w?latitude=' 
+                                + currLat +'&longitude=' + currLong;
+                
+                //test url to open
+                alert(urlString);
+                
+                //go there
+                window.location.href = urlString;
+                
             }
             
             function onError(error) {
