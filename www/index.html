@@ -30,7 +30,6 @@
             document.addEventListener("deviceready", onDeviceReady, false);
             
             function onDeviceReady() {
-                //alert('device is ready');
                 navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
             }
             
@@ -38,20 +37,15 @@
                 var currLat = position.coords.latitude;
                 var currLong = position.coords.longitude;
                 
-                var element = document.getElementById('geolocation');
-                element.innerHTML = 'Lat: ' + currLat  + '<br />'
-                                  + 'Long" ' + currLong;
+//                var element = document.getElementById('geolocation');
+//                element.innerHTML = 'Lat: ' + currLat  + '<br />'
+//                                  + 'Long" ' + currLong;
                                   
                 //Build URL for redirect to include current latitude/longitude
                 var urlString = 'http://192.168.1.148/svctrak/index.a5w?latitude=' 
                                 + currLat +'&longitude=' + currLong;
-                
-                //test url to open
-                alert(urlString);
-                
                 //go there
                 window.location.href = urlString;
-                
             }
             
             function onError(error) {
@@ -59,27 +53,16 @@
                       'message: ' + error.message + '\n');
             }
             
-            function sayHello() {
-                alert('hi');
-            }
-            
-            function openURL() {
-                alert('hi');
-                window.location.href = 'http://192.168.1.148/svctrak/index.a5w?name=Justin&job=developer'
-            }
-
         </script>
         
     </head>
-    <body>
+    <body><!--
         <div class="app">
             <h1 style="text-align: center;">WELCOME DRIVERS!</h1>
             <p id="geolocation">Finding geolocation...</p>
             <div id="buttons">                                                                
                 <button style="text-align: center;" class="bluBtn" onclick = "window.location.href = 'http://192.168.1.148/svctrak/index.a5w?name=Justin&job=developer'">Enter Driver Portal</button></h1>
-                <button style="text-align: center;" class="bluBtn" onclick = "sayHello()">Say Hi</button></h1>
-                <button style="text-align: center;" class="bluBtn" onclick = "openURL()">Say Hi then open url</button></h1>
             </div>
-        </div>
+        </div> -->
     </body>
 </html>
