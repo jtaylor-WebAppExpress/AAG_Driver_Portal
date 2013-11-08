@@ -5,9 +5,10 @@
           var urlString = document.location;
           alert(urlString);
           
-          alert("2 " + urlString);
+          var bothVariables = urlString.split("?");
           
-          alert("3 " + urlString);
+          alert(bothVariables[0]);
+          alert(bothVariables[1]);
           
           
           
